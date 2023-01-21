@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagenes/logo-negro.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Formulario Gema Adame Prudencio</title> 
+</head>
+<body>
+  <header>
+    <nav
+    id="navbar"
+    class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a href="./index.html">
+        <img class="logo" src="./imagenes/logo-negro.png" alt="logog" width="50" height="35"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </header>
+  
+<main>
+  <form action ="" class="formulario" id="formulario">
+    <!--registro-->
+  <div class="registrer">
+    <h1>Login</h1>
+    <ul id="iconos">
+      <a href="https://www.facebook.com" target="_blank"><img src="./imagenes/facebook.png" alt="icono-facebook" width="40px"></a> 
+      <a href="https://www.google.es/" target="_blank"><img src="./imagenes/google.png" alt="icono-google" width="40px"/></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="./imagenes/instagram.png" alt="icono-instagram" width="40px"/></a>
+    </ul>
+  </div>
+  <p class="separador">o</p>
+  <!--login-->
+<div class="login" id="login">
+   <h1>¿No tienes una cuenta? <span>¡Registrate aquí</h1>
+    <!--name-->
+    <div class="formulario-name" id="formulario-name">
+      <div class="formulario-grupo" id="form-nombre">
+        <input type="text" class="name" id="name" placeholder="Nombre" name="name" autocomplete="off" value="">
+        <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        <i class=" formulario_validacion-estado  fa-solid fa-badge-check"></i>
+      </div>
+        <p id="parrafo" class="formulario-input-error hidden">¡OJO El usuario tiene que ser de 4 a 16 dígitos y sólo puede contener números, letras y guión bajo</p>
+    </div>
+      <!--surname-->
+      <div class="formulario-surname" id="formulario-surname">
+        <div class="formulario-grupo" id="form-surname">
+          <input type="text" class="surname" id="surname" placeholder="Apellidos" name="surname" autocomplete="off" value="">
+          <i class="formulario_validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p id="parrafo1" class="formulario-input-error hidden">¡OJO El apellido tiene que tener sólo letras</p>
+        </div>
+<!--Fecha de nacimiento-->
+<div class="formulario-nac" id="form-nac">
+  <div class="formulario-nac" id="form-nac">
+    <label for="start">Fecha de nacimiento</label>
+    <input type="date" id="fecha" name="trip-start"
+       value="1930-01-31"  min="" max="2004-12-31">
+       <i class="formulario_validacion-estado fas fa-times-circle"></i>
+  </div>
+  <p id="parrafo2" class="formulario-input-error hidden">¡OJO El apellido tiene que tener sólo letras</p>
+</div>
+
+<!--DNI-->
+<div class="formulario-dni" id="form-dni">
+  <div class="formulario-grupo" id="formulario-dni">
+    <input type="dni" class="dni" id="nif" placeholder="DNI" name="D.N-I" maxlenght="8" autocomplete="off" value="" required>
+    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+  </div>
+  <p id="parrafo3" class="formulario-input-error hidden">¡OJO El DNI sólo puede contener 8 dígitos y 1 letra</p>
+</div>
+
+<!--móvil-->
+<div class="formulario-movil" id="fom-movil">
+  <div class="formulario-grupo"  id="formulario-movil">
+    <input type="numovil" class="numovil" id="numovil" placeholder="Nº móvil" name="numovil">
+    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+  </div>
+  <p id="parrafo4" class="formulario-input-error hidden">¡OJO debe tener el formato +34********* </p>
+</div>
+
+<!--email-->
+<div class="formulario-email" id="form-email">
+  <div class="formulario-grupo"  id="formulario-email">
+    <input type="email" class="email" id="email" placeholder="Email" name="email" autocomplete="off" value="">
+    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+  </div>
+  <p id="parrafo5" class="formulario-input-error hidden">¡OJO el email tiene que tener un @! </p>
+</div>
+
+<!--password-->
+<div class="formulario-password" id="form-password">
+  <div class="formulario-grupo" id="formulario-password">
+    <input type="password" class="password" id="password" placeholder="Contraseña" name="password" autocomplete="current-password" value="">
+  </div>
+  <i class="formulario_validacion-estado fas fa-times-circle"></i>
+</div>
+<p id="parrafo6"class="formulario-input-error hidden">¡OJO la contraseña debe de tener un mínimo de 6 carácteres! </p>
+<!--dódigo postal-->
+<div class="formulario-cp" id="form-codigopostal">
+  <div class="formulario-grupo" id="formulario-cp">
+  </div>
+  <input type="codigopostal" class="codigopostal" pattern="[0-9]{5}" id="codigopostal" placeholder="Código Postal" name="codigopostal"  value="">
+  <i class="formulario_validacion-estado fa-solid fa-circle-check"></i>
+</div>
+<p id="parrafo7" class="formulario-input-error hidden">¡OJO el código postal solo puede tener 5 números! </p>
+
+<!--radio buttons-->
+<div class="formulario-radio" id="form-radiobuttons">
+  <div class="formulario-grupo"  id="formulario-radiobuttons">
+    <input type="radio" id="suscripcionmensual" name="fav_language" value="suscripcionmensual">
+    <label for="html">Suscripción mensual</label><br>
+    <input type="radio" id="suscripcionanual" name="fav_language" value="suscripcionanual">
+    <label for="css">Suscripción anual</label><br>
+    <i class="formulario_validacion-estado fas fa-times-circle"></i>
+  </div>
+  </div>
+  <p id="parrafo8" class="formulario-input-error hidden">¡OJO tiene que seleccionar un plan! </p>
+
+<!--opciones-->
+  <div class="formulario-opciones">
+    <div class="formulario-grupo  formulario-grupo-correcto">
+      <select name="seleccion">
+        <option value="movistar" checked>Selecciona opción</option>
+        <option value="orange">Spotify</option>
+        <option value="vodafone">Apple music</option>
+        <option value="yoigo">Amazon music</option>
+        <option value="deezer">Deezer</option>
+       </select>
+    </div>
+  </div>
+  <p class="formulario-input-error hidden">¡OJO tiene que seleccionar una opción! </p>
+<!--opciones-->
+<div class="formulario-terms&conditions">
+  <div class="formulario-grupo  formulario-grupo-correcto">
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Acepto los <a href="https://www.google.com/a/help/intl/es/security/terms/appsecurity_ie_tos.html#:~:text=La%20aceptaci%C3%B3n%20de%20Google%20crear%C3%A1%20un%20acuerdo%20entre,establecidos%20en%20estos%20T%C3%A9rminos%20%28el%20%22%20Acuerdo%20%22%29.">términos</a> y <a href="https://www.google.com/a/help/intl/es/security/terms/appsecurity_ie_tos.html#:~:text=La%20aceptaci%C3%B3n%20de%20Google%20crear%C3%A1%20un%20acuerdo%20entre,establecidos%20en%20estos%20T%C3%A9rminos%20%28el%20%22%20Acuerdo%20%22%29.">condiciones</a></label>
+      <i class="formulario_validacion-estado fas fa-times-circle"></i>
+    </div>
+  </div>
+</div>
+<p class="formulario-input-error hidden">¡OJO debe aceptar los términos y condiciones! </p>
+
+<!--formulario mensaje error-->
+<div class="formulario-mensaje hidden" id="formulario-mensaje">
+  <p><i class="fas fa-exclamation-triangle"></i <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+</div>
+<!--formulario mensaje éxito-->
+<div class="formulario-mensaje-exito hidden" id="formulario-mensaje-exito">
+  <p><img src="./imagenes/ticverde.png" width="20px"><b>Formulario enviado correctamente</b></p>
+</div>
+<!--botones-->
+<button id="boton1" class="button1" >envíar datos</button>
+<button id="boton2" type="reset" class="button2" >borrar datos</button>
+</main>
+<!--iconos rrss-->
+<footer>     
+  <div class="text-center p-3" style="background-color: rgba(255, 244, 250, 0.8);">
+    <ul id="iconos">
+      <a href="https://www.facebook.com" target="_blank"><img src="./imagenes/facebook.png" alt="icono-facebook" width="40px"></a> 
+      <a href="https://www.google.es/" target="_blank"><img src="./imagenes/google.png" alt="icono-google" width="40px"/></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="./imagenes/instagram.png" alt="icono-instagram" width="40px"/></a>
+      </ul>
+      <div class="derechos-reservados">
+        <p>Copyright &copy; 2023 Gema Adame Prudencio.<br>All rights reserved</p>
+      </div>
+  </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+     <script src="./script.js"></script>
+  </body>
+</html>
