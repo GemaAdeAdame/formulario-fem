@@ -6,7 +6,8 @@ const expresiones = {
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	movil: /^\d{7,14}$/ // 7 a 14 numeros.
+	movil: /^\d{7,14}$/, // 7 a 14 numeros.
+	dni: /^\d{8}[A-Z]$/
 }
 
 
@@ -46,7 +47,7 @@ let PARRAFO5 = document.getElementById("parrafo5")
 
 let MOVIL= document.getElementById("formulario-movil")
 let MOVIL11 = document.getElementById("formulario-movil")
-let INPUTMOVIL = document.getElementById("nif")
+let INPUTMOVIL = document.getElementById("numovil")
 let DIVMOVIL = document.getElementById("formulario-movil")
 let PARRAFO4 = document.getElementById("parrafo4")
 
@@ -99,8 +100,8 @@ INPUTAPELLIDO.addEventListener('click', funcionapellido)
 INPUTAPELLIDO.addEventListener('click', funcionapellido)
 
 function funciondni () {
-	if(!INPUTDNI.value) {
-		console.log('está vacío')
+	if(!INPUTDNI.value || !expresiones.dni.test(INPUTDNI.value)) {
+		console.log(!INPUTDNI.value ? 'está vacío' : 'no cumple formato')
 		DNI.classList.add('formulario-grupo-incorrecto')
 		PARRAFO3.classList.remove('hidden')
 		}else{ 
